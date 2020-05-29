@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100%;
+}
+
+body {
+  background: #130f0d;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card {
+  background: #141316;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+}
+
+.characters .character {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 20px;
+  cursor: grab;
+  border: 1px solid transparent;
+  transition: border-color 400ms;
+}
+
+.characters .character:hover {
+  border: 1px solid #FF8B00;
+}
+
+.character .name {
+  margin-left: 10px;
+  color: #FF8B00;
+}
+
+.character img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.movies .movie {
+  border: 1px solid transparent;
+  transition: border-color 400ms;
+}
+
+.movies .movie:hover {
+  border: 1px solid #FFD300;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.movies > .card {
+  padding: 0;
+  margin: 0;
+}
+
+.movie .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 170px;
+}
+
+.movie .info .title {
+  color: #266EF6;
+  margin-top: auto;
+}
+
+.movie .info img {
+  width: 100%;
+  max-height: 140px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  object-fit: cover;
+}
+
+.movie > strong {
+  align-self: center;
+  color: #f5f5f5;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 5px 0;
+  border-top: 1px solid #FFFFFF10;
+  border-bottom: 1px solid #FFFFFF10;
+}
+
+.movie .characters-list {
+  min-height: 100px;
+  height: 100%;
+  padding: 10px;
+}
+
+.movie .characters-list .character {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #FFFFFF10;
+  cursor: default;
+  margin-bottom: 10px;
+  transition: border-color 400ms;
+}
+
+/* .movie .characters-list .character:hover {
+  border: 1px solid #FF0130;
+} */
+
+.movie .characters-list .character img {
+  height: 24px;
+  width: 24px;
+}
+
+.movie .characters-list .character .name {
+  font-size: 12px;
+}
+
+.highlight .characters-list {
+  background-color: #12E77211;
+  border: 2px dashed #FFFFFF10;
+  border-radius: 4px;
+}
+
+.is-dragging {
+  cursor: move;
+  opacity: 0.3;
+}
+
+.over .characters-list {
+  background-color: #E429F211;
+}
